@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.w {
+    width: 1076px;
+    margin: 0 auto;
+}
+
+/* 导航栏 */
+.dev {
+    position: relative;
+    z-index: 1;
+    height: 64px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2)
+}
+
+.dev .w ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.dev .w ul li {
+    height: 64px;
+    padding: 0 32px;
+    line-height: 64px;
+}
+
+.dev .w ul li a:hover {
+    color: #3c51b4;
+}
+
+/* 内容 */
+.content {
+    background-color: #a6b2f2;
+    padding: 30px 0 30px 0;
+    overflow: hidden;
+}
+
+.content .w {
+    background-color: #fff;
+    padding: 50px 15px 50px 15px;
+    border-radius: 8px;
+}
+
+/* 个人简介 */
+.profile {
+    padding: 50px 0 50px 0;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+.profile-picture {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    background: url(./image/profile-picture.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* 作品集 */
+.portfolio {
+    padding: 50px 0 50px 0;
+}
+
+.portfolio ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 10px 0 10px;
+    padding: 20px 0 20px 0;
+}
+
+
+.portfolio ul li {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.portfolio ul li a {
+    display: block;
+    width: 200px;
+    height: 280px;
+    background-color: #a6b2f2;
+}
+
+.portfolio ul li a img {
+    width: 200px;
+    height: 200px;
+}
+
+.portfolio ul li .portfolio-text p{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+}
+
+/* 留言板 */
+.message-board {
+    padding: 50px 0 50px 0;
+}
+
+.message-board h1 {
+    text-align: center;
+}
+
+.message-board form {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.message-board form textarea {
+    width: 600px;
+    height: 200px;
+}
+
+
+.message-board form button {
+    position: absolute;
+    right: 0;
+    width: 70px;
+    height: 30px;
+    appearance: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #a6b2f2;
+    cursor: pointer;
+}
+
+/* 页脚 */
+.footer {
+    height: 300px;
+    background-color: #1e1b4b;
+
+}
