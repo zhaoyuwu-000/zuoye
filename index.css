@@ -3,6 +3,30 @@
     padding: 0;
 }
 
+:root {
+    --text-color: #333;
+    --bg1: #a6b2f2;
+    --bg2: #fff;
+}
+
+body[data-theme='dark'] {
+    --text-color: #fff;
+    --bg1: #191627;
+    --bg2: #1e1b4b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;;
+}
+
 ol,
 ul {
     list-style: none;
@@ -23,7 +47,13 @@ a {
     position: relative;
     z-index: 1;
     height: 64px;
+    background-color: var(--bg2);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2)
+}
+
+.dev .w {
+    display: flex;
+    justify-content: space-between;
 }
 
 .dev .w ul {
@@ -38,19 +68,35 @@ a {
     line-height: 64px;
 }
 
+.dev .w ul li a {
+    color: var(--text-color);
+}
+
 .dev .w ul li a:hover {
     color: #3c51b4;
 }
 
+.dev .w button {
+    background-color: var(--bg2);
+    border: 0;
+    color: var(--text-color);
+}
+
+.dev .w button:hover {
+    color: #3c51b4;
+    cursor: pointer;
+}
+
 /* 内容 */
 .content {
-    background-color: #a6b2f2;
+    background-color: var(--bg1);
     padding: 30px 0 30px 0;
+    color: var(--text-color);
     overflow: hidden;
 }
 
 .content .w {
-    background-color: #fff;
+    background-color: var(--bg2);
     padding: 50px 15px 50px 15px;
     border-radius: 8px;
 }
@@ -78,6 +124,23 @@ a {
 /* 作品集 */
 .portfolio {
     padding: 50px 0 50px 0;
+}
+
+.splider {
+    width: 400px;
+    height: 300px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.splider .img-track {
+    display: flex;
+    transition: .5s;
+}
+
+.splider .img-track img {
+    width: 400px;
+    height: 300px;
 }
 
 .portfolio ul {
